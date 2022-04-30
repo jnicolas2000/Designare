@@ -1,0 +1,1170 @@
+.contenedor_index {
+    width: 100%;
+  
+    margin: auto;
+    padding: 48px 0;
+
+    /* display: flex;
+    justify-content: center; */
+
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.imagen_main2_index {
+    /* width: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; */
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.imagen_main2 {
+    border-radius: 10px;
+    min-height: 200px;
+    font-weight: bold;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+
+    /* width: calc(33.33% - 20px); */
+}
+
+.imagen_main2 .textos_index {
+    height: 100%;
+    color: white;
+    /* display: grid;
+    grid-template-rows: 1fr auto; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+:root {
+    --colortextos: #777777;
+    --colorbotones: gold;
+    --colorfondo: red;
+    --paddingsecciones: 60px 0;
+    --marginelementos: 40px;
+}
+
+.body_header {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.contenedor_header {
+    margin: auto;
+    overflow: hidden;
+    padding: var(--paddingsecciones);
+}
+
+.contenedor_headerpruebaindex {
+    margin: auto;
+    overflow: hidden;
+    padding: var(--paddingsecciones);
+}
+
+/* hover links */
+.enlaces_headerindex {
+    display: flex;
+    justify-content: end;
+    list-style: none;
+}
+
+.enlaces_headerindex a{
+    letter-spacing: 2px;
+
+    color: #000000;
+    font-size: medium;
+    position: relative;
+}
+
+.enlaces_headerindex a:after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: black;
+
+    /* animacion de derecha a izquierda */
+    transform-origin: :right;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.enlaces_headerindex a:hover:after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.enlaces_headerindexarriba {
+    display: flex;
+    justify-content: end;
+   
+
+}
+
+/* animacion imagenes */
+.contenedorpremain {
+
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+   
+}
+
+.contenedorpremain figure {
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+  
+    cursor: pointer;
+}
+
+.contenedorpremain figure img {
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+
+.contenedorpremain figure .premainletra {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
+    transition: all 0ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+
+.contenedorpremain figure:hover > .premainletra {
+    opacity: 1;
+    visibility: visible;
+}
+
+.contenedorpremain figure:hover > .premainletra h1 {
+    margin-top: 200px;
+    margin-bottom: 75px;
+}
+
+.enlaces_headerindexarriba a{
+    letter-spacing: 2px;
+
+    color: #000000;
+    font-size: medium;
+    position: relative;
+}
+
+.enlaces_headerindexarriba a:after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: black;
+
+    /* animacion de derecha a izquierda */
+    transform-origin: :right;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.enlaces_headerindexarriba a:hover:after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/* slider automatico */
+.articleindex {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+
+}
+
+.articleindex ul {
+    display: flex;
+    padding: 0;
+    animation: cambio 20s infinite alternate linear;
+    width: 400%;
+    height: 100%;
+}
+
+.articleindex li {
+    width: 100%;
+    list-style: none;
+}
+
+.articleindex img {
+    width: 100%;
+}
+
+@keyframes cambio {
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+.trajes {
+    font-size: larger;
+    background-color: #000000;
+    color: white;
+
+
+}7
+/* menu de navegacion */
+.lista_header {
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70px;
+}
+
+.lista_header li {
+    padding-left: 100px;
+}
+
+.otro_header {
+    list-style: none;
+    margin-bottom: 0;
+    display: flex;
+    padding: 0px;
+    justify-content: end;
+    align-items: center;
+    height: 100px;
+}
+
+.otro_header li {
+    padding-left: 20px;
+}
+
+.logo {
+    background-image: url(Imagenes/LOGO.png);
+    background-color: black;
+    font-size: 50px;
+    color: white;
+    position: sticky;
+    margin-right: 70px;
+
+    padding-left: 70px;
+    padding-right: 70px;
+    height: 100%;
+    width: 150px;
+  
+}
+
+
+
+.enlaces_header li {
+    list-style: none;
+    display: inline-block;
+}
+
+.enlaces_header a {
+    text-decoration: none;
+    color: black;
+    padding-left: 20px;
+}
+
+/* premain */
+.premain {
+    height: 500px;
+    background-image: url(./imagenes/luxury-gold-background-with-light-decoration-free-vector.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.sectionprueba {
+    height: 500px;
+    background-image: url(./imagenes/luxury-gold-background-with-light-decoration-free-vector.jpeg);
+    background-position: center;
+
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.contenedor-textos {
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.contenedor-textospruebaindex {
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.premain h1 {
+    font-size: 36px;
+    font-weight: 700px;
+    margin-bottom: 30px;
+}
+
+.premain p {
+    font-size: 20px;
+    font-weight: 400px;
+    margin-bottom: 40px;
+}
+
+.boton {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    padding: 15px;
+    background: var(--colorbotones);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+
+}
+
+
+.color {
+    color: black;
+    font-weight: bold;
+}
+
+.color_otros {
+    color: black;
+    font-weight: bold;
+}
+
+
+figure {
+    display: inline-block;
+    margin: 0;
+    position: relative;
+}
+
+
+#main1 {
+    text-align: center;
+    font-size: xx-large;
+    background-image: url(./Imagenes/modaaaaaaaaaaaaaaaa.jpg);
+    opacity: 0.5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+/* designare */
+
+.lista_header_designare li {
+    display: inline;
+    list-style-type: none;
+    padding-top: 35px;
+    padding-right: 60px;
+    padding-left: 40px;
+    padding-bottom: 35px;
+    position: relative;
+    left: 450px;
+    top: 25px;
+}
+
+.otro_header_designare li {
+    display: inline;
+    list-style-type: none;
+    position: relative;
+    top: -60px;
+    left: 1100px;
+    padding: 20px 10px 20px 10px;
+}
+
+
+
+.titulo_designare {
+    background-color: black;
+    font-size: 30px;
+    color: white;
+    position: sticky;
+    top: 45px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.buscarproducto_designare {
+    position: relative;
+    margin-left: 1000px;
+    top: 12px;
+}
+
+.buscarproducto {
+    position: relative;
+    margin-left: 900px;
+    top: 12px;
+}
+
+#color_header_designare {
+    background-color: beige;
+}
+
+.color {
+    color: black;
+    font-weight: bold;
+}
+
+.color_otros {
+    color: black;
+    font-weight: bold;
+}
+
+/* Moda sostenible */
+
+.lista_header_moda li {
+    display: inline;
+    list-style-type: none;
+    padding-top: 35px;
+    padding-right: 60px;
+    padding-left: 40px;
+    padding-bottom: 35px;
+    position: relative;
+    left: 450px;
+    top: 25px;
+}
+
+.otro_header_moda li {
+    display: inline;
+    list-style-type: none;
+    position: relative;
+    top: -60px;
+    left: 1100px;
+    padding: 20px 10px 20px 10px;
+}
+
+.titulo_moda {
+    background-color: black;
+    font-size: 30px;
+    color: white;
+    position: sticky;
+    top: 45px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.buscarproducto_moda {
+    position: relative;
+    margin-left: 900px;
+    top: 12px;
+}
+
+#color_header_moda {
+    background-color: beige;
+}
+
+.main_moda_sos{
+    display: grid;
+    width: 100%;
+    padding-left: 125px;
+    padding-top: 50px;
+
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 50px;
+}
+
+.contenido_moda{
+    height: 510px;
+    width: 25%;
+    box-shadow: 0 0 7px #111 ;
+
+    display: grid;
+
+}
+.contenido_moda .card{
+    height: 200px;
+    width: 100%;
+    margin-bottom: 170px;
+}
+.card img{
+    margin: auto;
+    display: block;
+}
+.imagen1_moda img{
+    height: 330px;
+    width: 330px;
+}
+.contenido_moda .imagen1_moda{
+     background-color: #111;
+}
+.contenido_moda .imagen2_moda{
+    background-color: #6A0C0B;
+}
+.contenido_moda .imagen3_moda{
+    background-color:#B11313;
+}
+.contenido_moda .imagen2_moda img{
+    height: 330px;
+    width: 230px;
+}
+.contenido_moda .imagen3_moda img{
+    height: 330px;
+    width: 300px;
+}
+.informacion_moda{
+    height: 80px;
+    width: 100%;
+}
+.informacion_moda h1{
+    font-family: sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    color: #333;
+    margin-bottom: -10px;
+}
+.informacion_moda p{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: .9em;
+    color: #555;
+}
+
+.precio_moda {
+    height:50px;
+    width: 85%;
+    margin: auto;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.precio1_moda{
+   color: red;
+    font-size: .8em;
+}
+
+.precio_moda .precio2_moda{
+    font-size: 1.5em;
+}
+
+.shopping_moda{
+    font-size: 1.5em;
+    color: #555;
+}
+    
+.moda_sostenible_titular {
+    position: sticky;
+    background-color: black;
+    color: white;
+    font-size: small;
+}
+
+.box-precio{
+    width: 80px;
+}
+
+/* nuevo */
+
+/* General Styles */
+
+.nuevo {
+    /* background-color: #ecf0f1; */
+    background: url(./imagenes/Moda-sostenible-es-moda-circular-gabrielfariasiribarren.com_.jpg);
+    background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    color: #000000;
+    font-family: 'Manjari', sans-serif;
+}
+
+/* HEADER */
+
+.title_nuevo h1 {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2.9em;
+    text-transform: uppercase;
+}
+
+.color_nuevo {
+    color: white;
+}
+
+/* CONTAINER */
+
+.container_nuevo {
+    width: 90%;
+    max-width: 1000px;
+    margin: 1.6em auto;
+    display: grid;
+    gap: 1.6em;
+    /* grid-template-columns: repeat(4, 1fr) 3%; */
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.container_nuevo>.header_nuevo, .container_nuevo>.content_nuevo, .container_nuevo>.sidebar, .container_nuevo>.footer, .container_nuevo>div {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #000000;
+}
+
+.container_nuevo>.header_nuevo, .container_nuevo>.footer {
+    grid-column: 1/-1;
+    background-color: #1e272e;
+    color: #ffffff;
+}
+
+.container_nuevo>.content_nuevo {
+    grid-column: span 3;
+    grid-row: span 4;
+}
+
+.content_nuevo>.article_nuevo {
+    background: #808e9b;
+    padding: 20px;
+    margin-top: 5px;
+    color: #dfe6e9
+}
+
+.content_nuevo .article_nuevo h1,
+.content_nuevo .article_nuevo p {
+    padding: 10px;
+}
+
+.container_nuevo>.sidebar {
+    grid-column: span 2;
+    grid-row: span 4;
+    background: #485460;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_nuevo .sidebar img {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.container_nuevo>.related-post {
+    background: #2d3436;
+    color: #ffffff;
+    height: 180px;
+    ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.container_nuevo>.related-post:hover {
+    cursor: pointer;
+    color: #000000;
+    background: #ffffff;
+}
+
+.lista_header_nuevo li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 450px;
+    top: 25px;
+}
+
+.sidebar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 700px) {
+    .header_nuevo {
+        text-align: center;
+    }
+    .container_nuevo .content_nuevo{
+        grid-column: 1 / -1;
+    }
+    .container_nuevo .sidebar {
+        grid-column: 1 / 6;
+    }
+
+    .container_nuevo .related-post {
+        grid-column: 1/-1;
+    }
+
+ /* INDEX */
+  .enlaces_header {
+      display: none;
+  }
+
+
+}
+
+/* Personalizados */
+.lista_header_personalizado li {
+    display: inline;
+    list-style-type: none;
+    padding-top: 35px;
+    padding-right: 60px;
+    padding-left: 40px;
+    padding-bottom: 35px;
+    position: relative;
+    left: 450px;
+    top: 25px;
+}
+
+.otro_header_personalizado li {
+    display: inline;
+    list-style-type: none;
+    position: relative;
+    top: -60px;
+    left: 1100px;
+    padding: 20px 10px 20px 10px;
+}
+
+.titulo_personalizado {
+    background-color: black;
+    font-size: 30px;
+    color: white;
+    position: sticky;
+    top: 45px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.buscarproducto_personalizado {
+    position: relative;
+    margin-left: 900px;
+    top: 12px;
+}
+
+#color_header_personalizado {
+    background-color: beige;
+}
+
+/* carrito */
+
+.lista_header_carrito li {
+    display: inline;
+    list-style-type: none;
+    padding-top: 35px;
+    padding-right: 60px;
+    padding-left: 40px;
+    padding-bottom: 35px;
+    position: relative;
+    left: 450px;
+    top: 25px;
+}
+
+.otro_header_carrito li {
+    display: inline;
+    list-style-type: none;
+    position: relative;
+    top: -60px;
+    left: 1100px;
+    padding: 20px 10px 20px 10px;
+}
+
+.titulo_carrito_marca {
+    background-color: black;
+    font-size: 30px;
+    color: white;
+    position: sticky;
+    top: 45px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.buscarproducto_carrito {
+    position: relative;
+    margin-left: 900px;
+    top: 12px;
+}
+
+#color_header_carrito {
+    background-color: beige;
+}
+
+.carrito_compras {
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+/* likes */
+.title_likes {
+    list-style: none;
+    margin-bottom: 0;
+    display: flex;
+    padding: 0px;
+    justify-content: end;
+    align-items: center;
+    height: 100px;
+}
+
+.title_likes li {
+    padding-left: 20px;
+}
+
+body .likes {
+    /* background-color: #ecf0f1; */
+    width: 100%;
+    background: url(./imagenes/Moda-sostenible-es-moda-circular-gabrielfariasiribarren.com_.jpg);
+
+    color: #000000;
+    font-family: 'Manjari', sans-serif;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "aside"
+    "main"
+    "footer";
+}
+
+.headerlikes {
+    grid-area: header;
+    background-color: white;
+    font-size: small;
+  
+}
+
+
+.asidelikes {
+    grid-area: aside;
+    background-color: yellow;
+  
+}
+
+.mainlikes {
+    grid-area: main;
+    background-color: red;
+}
+
+
+.footerlikes {
+    grid-area: footer;
+    background-color: wheat;
+}
+
+.imagen_main2 .textos_pruebaindex {
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: start;
+    padding-bottom: 10%;
+
+    /* display: grid;
+    grid-template-rows: 1fr auto; */
+  
+  
+}
+
+/* moda sostenible */
+.title_moda {
+    list-style: none;
+    margin-bottom: 0;
+    display: flex;
+    padding: 0px;
+    justify-content: end;
+    align-items: center;
+    height: 100px;
+}
+
+.title_moda li {
+    padding-left: 20px;
+}
+
+body .moda {
+    /* background-color: #ecf0f1; */
+    width: 100%;
+    background: url(./imagenes/Moda-sostenible-es-moda-circular-gabrielfariasiribarren.com_.jpg);
+
+    color: #000000;
+    font-family: 'Manjari', sans-serif;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main main main"
+    "footer";
+}
+
+.headermoda {
+    grid-area: header;
+    background-color: white;
+    font-size: small;
+  
+}
+
+
+.mainmoda {
+    grid-area: main;
+    background-color: red;
+}
+
+
+.footermoda {
+    grid-area: footer;
+    background-color: wheat;
+}
+
+/* perfil */
+body .perfil {
+    /* background-color: #ecf0f1; */
+    width: 100%;
+    background: url(./imagenes/Moda-sostenible-es-moda-circular-gabrielfariasiribarren.com_.jpg);
+    background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    color: #000000;
+    font-family: 'Manjari', sans-serif;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+.headerperfil {
+    grid-area: header;
+    background-color: white;
+    font-size: small;
+  
+}
+
+
+.mainperfil {
+    grid-area: main;
+}
+
+
+.footerperfil {
+    grid-area: footer;
+    background-color: wheat;
+}
+
+/* carrito */
+body .carrito {
+    /* background-color: #ecf0f1; */
+    width: 100%;
+    background: url(./imagenes/Moda-sostenible-es-moda-circular-gabrielfariasiribarren.com_.jpg);
+    background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    color: #000000;
+    font-family: 'Manjari', sans-serif;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+.headercarrito {
+    grid-area: header;
+    background-color: white;
+    font-size: small;
+  
+}
+
+.maincarrito {
+    grid-area: main;
+}
+
+.footercarrito {
+    grid-area: footer;
+  
+    
+}
+
+/* PRUEBA INDEX*/
+
+/* General Styles */
+
+body .nuevopruebaindex {
+    /* background-color: #ecf0f1; */
+    width: 100%;
+    background: url(./imagenes/Moda-sostenible-es-moda-circular-gabrielfariasiribarren.com_.jpg);
+    background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    color: #000000;
+    font-family: 'Manjari', sans-serif;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "aside"
+    "main"
+    "article"
+    "article"
+    "article"
+    "footer";
+}
+
+.headerpruebaindex {
+    grid-area: header;
+    background-color:antiquewhite;
+    font-size: small;
+  
+}
+
+
+.asidepruebaindex {
+    grid-area: aside;
+  
+}
+
+.mainpruebaindex {
+    grid-area: main;
+}
+
+.articlepruebaindex {
+    grid-area: article;
+  
+    
+}
+
+.footerpruebaindex {
+    grid-area: footer;
+    background-color: wheat;
+}
+
+.imagen_main2 .textos_pruebaindex {
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: start;
+    padding-bottom: 10%;
+
+    /* display: grid;
+    grid-template-rows: 1fr auto; */
+  
+  
+}
+/* /* HEADER */
+
+/* html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+}
+
+.color_nuevopruebaindex {
+    color: white;
+}
+
+CONTAINER
+
+.container_nuevopruebaindex {
+    width: 100%;
+
+}
+
+.container_nuevopruebaindex>.header_nuevopruebaindex, .container_nuevopruebaindex>.content_nuevopruebaindex, .container_nuevopruebaindex>.sidebarpruebaindex, .container_nuevopruebaindex>.footerpruebaindex, .container_nuevopruebaindex>div {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #000000;
+}
+
+.container_nuevopruebaindex>.header_nuevopruebaindex, .container_nuevopruebaindex>.footerpruebaindex {
+    grid-column: 1/-1;
+    background-color: #1e272e;
+    color: #ffffff;
+}
+
+.container_nuevopruebaindex>.content_nuevopruebaindex {
+    grid-column: span 3;
+    grid-row: span 4;
+}
+
+.content_nuevopruebaindex>.article_nuevopruebaindex {
+    background: #808e9b;
+    padding: 20px;
+    margin-top: 5px;
+    color: #dfe6e9
+}
+
+.content_nuevopruebaindex .article_nuevopruebaindex h1,
+.content_nuevopruebaindex .article_nuevopruebaindex p {
+    padding: 10px;
+}
+
+.container_nuevopruebaindex>.sidebarpruebaindex {
+    grid-column: span 2;
+    grid-row: span 4;
+    background: #485460;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_nuevopruebaindex .sidebarpruebaindex img {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.container_nuevopruebaindex>.related-postpruebaindex {
+    background: #2d3436;
+    color: #ffffff;
+    height: 180px;
+    ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.container_nuevopruebaindex>.related-postpruebaindex:hover {
+    cursor: pointer;
+    color: #000000;
+    background: #ffffff;
+}
+
+.lista_header_nuevopruebaindex li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 450px;
+    top: 25px;
+}
+
+.sidebarpruebaindex {
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+.title_nuevopruebaindex {
+    list-style: none;
+    margin-bottom: 0;
+    display: flex;
+    padding: 0px;
+    justify-content: end;
+    align-items: center;
+    height: 100px;
+}
+
+.title_nuevopruebaindex li {
+    padding-left: 20px;
+}
