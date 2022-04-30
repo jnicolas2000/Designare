@@ -948,7 +948,7 @@ body .perfil {
 
 .headerperfil {
     grid-area: header;
-    background-color: white;
+    background-color: wheat;
     font-size: small;
   
 }
@@ -956,12 +956,13 @@ body .perfil {
 
 .mainperfil {
     grid-area: main;
+    background-color: red;
 }
 
 
 .footerperfil {
     grid-area: footer;
-    background-color: wheat;
+    background-color: yellow;
 }
 
 /* carrito */
