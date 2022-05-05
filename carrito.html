@@ -6,122 +6,183 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- boostrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <!-- <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.css"> -->
 
+    <!-- css propio -->
     <link  rel ="stylesheet" href ="main.css">
+
 </head>
 
-<body class="carrito">
+<body class="grid-container-carrito">
     
-    <header class="headercarrito">
-        <div class="enlaces header">
-            <li><a class="color_otros" href="likes.html">Likes</a></li>
-            <li><a class="color_otros" href="perfil.html">Crear perfil</a></li>
-            <li><a class="color_otros" href="carrito.html">Carrito de compras</a></li>
-        </div>
-
-        <nav class="lista_header contenedor_header">
-            <div class="logo">
-
-            </div>
-
-            <form class="buscarproducto">
-                <input type="text" placeholder="Buscar productos">
+  <div class="navbarcarrito">
+    <nav class="navbar navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="pruebaindex.html"><img src="../ENTREGA-/Imagenes/LOGO.png" alt="Logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../ENTREGA-/likes.html">Likes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../ENTREGA-/perfil.html">Perfil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../ENTREGA-/carrito.html">Carrito de compras</a>
+              </li>
+              
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
-
-            <div class="enlaces_header">
-                    <li><a class="color" href="designare.html">Designare</a></li>
-                    <li><a class="color" href="nuevo.html">Más información</a></li>
-                    <li><a class="color_nuevo" href="pruebaindex.html">Home</a></li>
-            </div>
-        </nav>
-    </header>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+        
+       <header id="headercarrito"> 
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="designare.html">Designare</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="moda_sostenible.html">Moda sostenible</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="personalizados.html">Personalizado</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="nuevo.html" >Más información</a>
+            </li>
+          </ul>
+       </header>
 
     <main class="maincarrito">
-
-        <center>
-            <div>
-                <table id="main-container" border="5" cellpadding="10" cellspacing="10">
-                    <thead>
-                        <tr>
-                            <th class="titulo_carrito">Foto del producto</th>
-                            <th class="titulo_carrito">Producto</th>
-                            <th class="titulo_carrito">Talla</th>
-                            <th class="titulo_carrito">Estado del producto</th>
-                            <th class="titulo_carrito">Total</th>
-                        </tr>
-                    </thead>
-                    <tbody class="contenido_tabla">
-                        <tr>
-                            <td><img src="imagenes/elle-vaquero-ancho-mango-39999-1598868014.webp" alt="Pantalón Vaquero" height="200"></td>
-                            <td>Pantalon Vaquero</td>
-                            <td>
-                                <select name="talles">
-                                    <option value="S">Small</option>
-                                    <option value="M">Medium</option>
-                                    <option value="L">Large</option>
-                                    <option value="XL">Extra L</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select name="talles">
-                                    <option value="C">Comprar</option>
-                                    <option value="D">Descartar</option>
-                                    <option value="M">Mantener</option>
-                                </select>
-                            </td>
-                            <td>$300.000</td>
-                        </tr>
-                        <tr>
-                            <td><img src="imagenes/Blazer-de-verano-para-hombre-ropa-coreana-a-la-moda-estampado-de-gradiente-inspirado-en-flores.jpg_Q90.jpg_.webp" alt="Blazzer" height="200"></td>
-                            <td>Blazzer Difuminado</td>
-                            <td>
-                            <select name="talles">
-                                <option value="S">Small</option>
-                                <option value="M">Medium</option>
-                                <option value="L">Large</option>
-                                <option value="XL">Extra L</option>
-                            </select>
-                            </td>
-                            <td>
-                            <select name="talles">
-                                    <option value="C">Comprar</option>
-                                    <option value="D">Descartar</option>
-                                    <option value="M">Mantener</option>
-                            </select>
-                            </td>
-                            <td>$400.000</td>
-                        </tr>
-                        <tr>
-                            <td><img src="imagenes/Camiseta-Premium-de-verano-para-hombre-camisa-de-piel-de-tigre-3D-Harajuku-informal-de-manga.jpg_Q90.jpg_.webp" alt="Camiseta de Tigre" height="200"></td>
-                            <td>Camiseta de Tigre</td>
-                            <td>
-                            <select name="talles">
-                                <option value="S">Small</option>
-                                <option value="M">Medium</option>
-                                <option value="L">Large</option>
-                                <option value="XL">Extra L</option>
-                            </select>
-                            </td>
-                            <td>
-                                <select name="talles">
-                                    <option value="C">Comprar</option>
-                                    <option value="D">Descartar</option>
-                                    <option value="M">Mantener</option>
-                            </select>
-                            </td>
-                            <td>$200.000</td>
-                        </tr>
-                    </tbody>  
-                </table>
-            </div>
-        </center>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Foto</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Talla</th>
+            <th scope="col">Estado del producto</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><img src="imagenes/Blazer-de-verano-para-hombre-ropa-coreana-a-la-moda-estampado-de-gradiente-inspirado-en-flores.jpg_Q90.jpg_.webp" alt="Blazzer" height="200"></th>
+            <td>Blazzer</td>
+            <td>
+              <select name="talles">
+                  <option value="S">Small</option>
+                  <option value="M">Medium</option>
+                  <option value="L">Large</option>
+                  <option value="XL">Extra L</option>
+              </select>
+          </td>
+          <td>
+            <select name="talles">
+                <option value="C">Comprar</option>
+                <option value="D">Descartar</option>
+                <option value="M">Mantener</option>
+            </select>
+        </td>
+            <td>$400.000</td>
+          </tr>
+          <tr>
+            <th scope="row"><img src="imagenes/elle-vaquero-ancho-mango-39999-1598868014.webp" alt="Pantalón Vaquero" height="200"></th>
+            <td>Pantalón vaquero</td>
+            <td>
+              <select name="talles">
+                  <option value="S">Small</option>
+                  <option value="M">Medium</option>
+                  <option value="L">Large</option>
+                  <option value="XL">Extra L</option>
+              </select>
+          </td>
+          <td>
+            <select name="talles">
+                <option value="C">Comprar</option>
+                <option value="D">Descartar</option>
+                <option value="M">Mantener</option>
+            </select>
+        </td>
+            <td>$300.000</td>
+          </tr>
+          <tr>
+            <th scope="row"><img src="imagenes/Camiseta-Premium-de-verano-para-hombre-camisa-de-piel-de-tigre-3D-Harajuku-informal-de-manga.jpg_Q90.jpg_.webp" alt="Camiseta de Tigre" height="200"></th>
+            <td colspan="2">Camiseta de tigre</td>
+            <td>
+              <select name="talles">
+                  <option value="S">Small</option>
+                  <option value="M">Medium</option>
+                  <option value="L">Large</option>
+                  <option value="XL">Extra L</option>
+              </select>
+          </td>
+          <td>
+            <select name="talles">
+                <option value="C">Comprar</option>
+                <option value="D">Descartar</option>
+                <option value="M">Mantener</option>
+            </select>
+        </td>
+          <td>$250.000</td>
+          </tr>
+        </tbody>
+      </table>
     </main>
+
+    <div class="sidebarcarrito">
+      <h2>RECOMENDACIONES</h2>
+      <div class="card-group">
+        <div class="card">
+          <img src="./Imagenes/Camiseta-Premium-de-verano-para-hombre-camisa-de-piel-de-tigre-3D-Harajuku-informal-de-manga.jpg_Q90.jpg_.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Caiseta de Tigre</h5>
+            <p class="card-text">Valentina Sanabria.</p>
+            <p class="card-text"><small class="text-muted">$250.000</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./Imagenes/Blazer-de-verano-para-hombre-ropa-coreana-a-la-moda-estampado-de-gradiente-inspirado-en-flores.jpg_Q90.jpg_.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Blazzer</h5>
+            <p class="card-text">Valentina Sanabria</p>
+            <p class="card-text"><small class="text-muted">$300.000</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./Imagenes/elle-vaquero-ancho-mango-39999-1598868014.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Pantalon Vaquero</h5>
+            <p class="card-text">Valentina Sanabria</p>
+            <p class="card-text"><small class="text-muted">$450.000</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
 
         <footer class="footercarrito">
             <p> Todo lo descrito anteriormente se puede encontrar detalladamente en los terminos y condiciones de la empresa, que se acepta una vez hecho el registro</p>
         </footer>
 
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
 </html>

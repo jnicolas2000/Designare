@@ -4,6 +4,7 @@
     margin: auto;
     padding: 48px 0;
 
+
     /* display: flex;
     justify-content: center; */
 
@@ -142,12 +143,13 @@
     position: absolute;
     top: 0;
     width: 100%;
-    height: 100%;
+
     background-color: antiquewhite;
     transition: all 0ms ease-out;
     opacity: 0;
-    visibility: hidden;
+
     text-align: center;
+  
 }
 
 .contenedorpremain figure:hover > .premainletra {
@@ -200,7 +202,8 @@
 
 .articleindex ul {
     display: flex;
-    padding: 0;
+    margin-top: 50px;
+    padding-top: 50px;
     animation: cambio 20s infinite alternate linear;
     width: 400%;
     height: 100%;
@@ -213,6 +216,7 @@
 
 .articleindex img {
     width: 100%;
+    padding-bottom: 20px;
 }
 
 @keyframes cambio {
@@ -226,12 +230,16 @@
     100%{margin-left: -300%;}
 }
 
+.articleindex span {
+
+    margin-top: 50px;
+}
+
 .trajes {
     font-size: larger;
-    background-color: #000000;
-    color: white;
-
-
+    color: black;
+    position: relative;
+    top: 60px;
 }7
 /* menu de navegacion */
 .lista_header {
@@ -723,151 +731,8 @@ figure {
 
 }
 
-/* Personalizados */
-.lista_header_personalizado li {
-    display: inline;
-    list-style-type: none;
-    padding-top: 35px;
-    padding-right: 60px;
-    padding-left: 40px;
-    padding-bottom: 35px;
-    position: relative;
-    left: 450px;
-    top: 25px;
-}
-
-.otro_header_personalizado li {
-    display: inline;
-    list-style-type: none;
-    position: relative;
-    top: -60px;
-    left: 1100px;
-    padding: 20px 10px 20px 10px;
-}
-
-.titulo_personalizado {
-    background-color: black;
-    font-size: 30px;
-    color: white;
-    position: sticky;
-    top: 45px;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
-.buscarproducto_personalizado {
-    position: relative;
-    margin-left: 900px;
-    top: 12px;
-}
-
-#color_header_personalizado {
-    background-color: beige;
-}
-
-/* carrito */
-
-.lista_header_carrito li {
-    display: inline;
-    list-style-type: none;
-    padding-top: 35px;
-    padding-right: 60px;
-    padding-left: 40px;
-    padding-bottom: 35px;
-    position: relative;
-    left: 450px;
-    top: 25px;
-}
-
-.otro_header_carrito li {
-    display: inline;
-    list-style-type: none;
-    position: relative;
-    top: -60px;
-    left: 1100px;
-    padding: 20px 10px 20px 10px;
-}
-
-.titulo_carrito_marca {
-    background-color: black;
-    font-size: 30px;
-    color: white;
-    position: sticky;
-    top: 45px;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
-.buscarproducto_carrito {
-    position: relative;
-    margin-left: 900px;
-    top: 12px;
-}
-
-#color_header_carrito {
-    background-color: beige;
-}
-
-.carrito_compras {
-    text-align: center;
-    background-color: black;
-    color: white;
-}
-
-/* likes */
-.title_likes {
-    list-style: none;
-    margin-bottom: 0;
-    display: flex;
-    padding: 0px;
-    justify-content: end;
-    align-items: center;
-    height: 100px;
-}
-
-.title_likes li {
-    padding-left: 20px;
-}
-
-body .likes {
-    /* background-color: #ecf0f1; */
-    width: 100%;
-    background: url(./imagenes/Moda-sostenible-es-moda-circular-gabrielfariasiribarren.com_.jpg);
-
-    color: #000000;
-    font-family: 'Manjari', sans-serif;
-    display: grid;
-    grid-template-areas: 
-    "header"
-    "aside"
-    "main"
-    "footer";
-}
-
-.headerlikes {
-    grid-area: header;
-    background-color: white;
-    font-size: small;
-  
-}
 
 
-.asidelikes {
-    grid-area: aside;
-    background-color: yellow;
-  
-}
-
-.mainlikes {
-    grid-area: main;
-    background-color: red;
-}
-
-
-.footerlikes {
-    grid-area: footer;
-    background-color: wheat;
-}
 
 .imagen_main2 .textos_pruebaindex {
     height: 100%;
@@ -965,39 +830,6 @@ body .perfil {
     background-color: yellow;
 }
 
-/* carrito */
-body .carrito {
-    /* background-color: #ecf0f1; */
-    width: 100%;
-    background: url(./imagenes/Moda-sostenible-es-moda-circular-gabrielfariasiribarren.com_.jpg);
-    background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
-    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
-    color: #000000;
-    font-family: 'Manjari', sans-serif;
-    display: grid;
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer";
-}
-
-.headercarrito {
-    grid-area: header;
-    background-color: white;
-    font-size: small;
-  
-}
-
-.maincarrito {
-    grid-area: main;
-}
-
-.footercarrito {
-    grid-area: footer;
-  
-    
-}
-
 /* PRUEBA INDEX*/
 
 /* General Styles */
@@ -1025,13 +857,19 @@ body .nuevopruebaindex {
     grid-area: header;
     background-color:antiquewhite;
     font-size: small;
+
   
 }
 
 
 .asidepruebaindex {
     grid-area: aside;
-  
+    height: 100%;
+
+}
+
+.asidepruebaindex .premainletra {
+    padding-bottom: 50%;
 }
 
 .mainpruebaindex {
@@ -1156,6 +994,49 @@ CONTAINER
     flex-wrap: wrap;
 } */
 
+/* BOOTSTRAP PERFIL */
+#perfil_menuprincipal {
+    padding-top: 7%;
+    background-color: antiquewhite;
+}
+
+.nav-link {
+    color: black;
+}
+
+.mainperfil {
+    background-color:white;
+}
+
+.row {
+    background: white;
+    border radius: 30px;
+}
+
+.img_perfil {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.btn1{
+    border: none;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.btn1:hover{
+    background: white;
+    color: black;
+    border: 1px solid;
+
+}
+
+
 .title_nuevopruebaindex {
     list-style: none;
     margin-bottom: 0;
@@ -1169,3 +1050,310 @@ CONTAINER
 .title_nuevopruebaindex li {
     padding-left: 20px;
 }
+.mainpruebaindex  .container {
+    width: 100%;
+ 
+}
+.mainpruebaindex .container .col {
+    height: 250px;
+    width: 500px;
+}
+
+.mainpruebaindex .container .col .textos_index {
+padding: 100px;
+margin-top: 30px;
+padding-left: 20px;
+padding-bottom: 180px;
+font-weight: bold;
+font-size: x-large;
+color: white;
+}
+
+.mainpruebaindex  .container .row {
+gap: 50px;
+justify-content: center;
+}
+
+/* likes mejoras */
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+.grid-container-likes > *{
+   
+    padding: 30px;
+    text-align: center;
+}
+
+.headerlikes {
+    grid-area: header;
+    background-color: antiquewhite;
+    padding: 10px;
+
+}
+
+.navbarlikes {
+    grid-area: navbar;
+}
+
+
+
+.mainlikes {
+    grid-area: main;
+    width: 100%;
+    margin-right: 600px;
+}
+
+.sidebarlikes {
+    grid-area: sidebar;
+}
+
+.footerlikes {
+    grid-area: footer;
+}
+
+.grid-container-likes {
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+        "navbar"
+        "header"
+        "main"
+        "sidebar"
+        "footer"
+    ;
+}
+
+@media (min-width: 600px) {
+    .grid-container-likes {
+        grid-template-areas: 
+        "navbar navbar"
+        "header header"
+        "sidebar main"
+        "footer footer"
+        ;
+    }
+    
+}
+
+/* Carrito mejoras */
+.grid-container-carrito > *{
+   
+    padding: 30px;
+    text-align: center;
+}
+
+.headercarrito {
+    grid-area: header;
+    background-color: antiquewhite;
+    padding: 10px;
+
+}
+
+.navbarcarrito {
+    grid-area: navbar;
+}
+
+
+
+.maincarrito {
+    grid-area: main;
+    width: 100%;
+    margin-right: 600px;
+}
+
+.sidebarcarrito {
+    grid-area: sidebar;
+}
+
+.footercarrito {
+    grid-area: footer;
+}
+
+.sectioncarrito {
+    grid-area: section;
+}
+
+.grid-container-carrito {
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+        "navbar"
+        "header"
+        "main"
+        "footer"
+    ;
+}
+
+@media (min-width: 600px) {
+    .grid-container-carrito {
+        grid-template-areas: 
+        "navbar navbar"
+        "header header"
+        "main main"
+        "sidebar sidebar"
+        "footer footer"
+        ;
+    }
+    
+}
+
+/* Personalizado mejoras */
+.grid-container-personalizado > *{
+   
+    padding: 30px;
+    text-align: center;
+}
+
+.headerpersonalizado {
+    grid-area: header;
+    background-color: antiquewhite;
+    padding: 10px;
+
+}
+
+.navbarpersonalizado {
+    grid-area: navbar;
+}
+
+
+
+.mainpersonalizado {
+    grid-area: main;
+    width: 100%;
+    margin-right: 800px;
+}
+
+.sidebarpersonalizado {
+    grid-area: sidebar;
+    background-image: ;
+}
+
+.footerpersonalizado {
+    grid-area: footer;
+}
+
+.sectionpersonalizado {
+    grid-area: section;
+}
+
+.grid-container-personalizado {
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+        "navbar"
+        "header"
+        "main"
+        "footer"
+    ;
+}
+
+.sidebarpersonalizado .contenedorpremain figure .premainletra {
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    background-color: antiquewhite;
+    transition: all 0ms ease-out;
+    opacity: 0;
+
+    text-align: center;
+  
+}
+
+@media (min-width: 600px) {
+    .grid-container-personalizado {
+        grid-template-areas: 
+        "navbar navbar"
+        "header header"
+        "section section"
+        "main sidebar"
+        "footer footer"
+        ;
+    }
+    
+}
+
+/* Más información mejoras */
+.grid-container-info > *{
+   
+    padding: 30px;
+    text-align: center;
+}
+
+.headerinfo {
+    grid-area: header;
+    background-color: antiquewhite;
+    padding: 10px;
+
+}
+
+.navbarinfo {
+    grid-area: navbar;
+}
+
+
+
+.maininfo {
+    grid-area: main;
+    width: 100%;
+ 
+}
+
+.sidebarinfo {
+    grid-area: sidebar;
+    background-image: ;
+}
+
+.footerinfo {
+    grid-area: footer;
+}
+
+.sectioninfo {
+    grid-area: section;
+   width: 100%;
+}
+
+.grid-container-info {
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+        "navbar"
+        "header"
+        "main"
+        "footer"
+    ;
+}
+
+.sidebarinfo .contenedorpremain figure .premainletra {
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    background-color: antiquewhite;
+    transition: all 0ms ease-out;
+    opacity: 0;
+
+    text-align: center;
+  
+}
+
+@media (min-width: 600px) {
+    .grid-container-info {
+        grid-template-areas: 
+        "navbar navbar"
+        "header header"
+        "main sidebar"
+        "section section"
+        "footer footer"
+        ;
+    }
+    
+}
+
+
